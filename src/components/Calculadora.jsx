@@ -24,7 +24,7 @@ function Calculadora() {
     };
 
     const enviarOrden = (orden) => {
-        fetch(`http://localhost:3500/v1/calculadora/${orden}`, {
+        fetch(`https://calculadora-back-virid.vercel.app/v1/calculadora/${orden}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ numeros: seleccionados.map(letra => valoresEditables[letra]) })
@@ -41,7 +41,7 @@ function Calculadora() {
     };
 
     const enviarEcuacion = () => {
-        fetch('http://localhost:3500/v1/calculadora/ecuacion', {
+        fetch('https://calculadora-back-virid.vercel.app/v1/calculadora/ecuacion', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ ecuacion, valores: valoresEditables })
